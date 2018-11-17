@@ -9,6 +9,7 @@ var VideoList = ({videos, handleVideoListEntryTitleClick}) => (
           key={video.etag}
           video={video}
           handleVideoListEntryTitleClick={handleVideoListEntryTitleClick}
+          // {/*handleVideoListEntryTitleClick no longer needed. get state directly from store videolist*/}
         />
       ))
     }

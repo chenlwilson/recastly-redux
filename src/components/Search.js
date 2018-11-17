@@ -1,5 +1,5 @@
 import React from 'react';
- 
+
 class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +24,7 @@ class Search extends React.Component {
           type="text"
           value={this.state.value}
           onChange={this.handleInputChange.bind(this)}
+          //re-write to dispatch actions instead of handleInputChange
         />
         <button className="btn hidden-sm-down">
           <span className="glyphicon glyphicon-search"></span>

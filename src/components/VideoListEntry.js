@@ -9,6 +9,7 @@ var VideoListEntry = ({video, handleVideoListEntryTitleClick}) => (
       <div
         className="video-list-entry-title"
         onClick={() => handleVideoListEntryTitleClick(video)}
+        //re-write to dispatch actions instead of handleVideoListEntryTitleClick
       >
         {video.snippet.title}
       </div>

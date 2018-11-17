@@ -46,15 +46,22 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Nav handleSearchInputChange={this.getYouTubeVideos.bind(this)}/>
+        {/* probably don't need getYouTubeVideos */}
+        <Nav handleSearchInputChange={this.getYouTubeVideos.bind(this)}
+        />
         <div className="row">
           <div className="col-md-7">
-            <VideoPlayer video={this.state.currentVideo}/>
+            {/* do not need to pass down currentVideo */}
+            <VideoPlayer video={this.state.currentVideo}
+            />
           </div>
           <div className="col-md-5">
             <VideoList
+              //don't need to pass down videos
+              //don't need handleVideoListEntryTitleClick
               handleVideoListEntryTitleClick={this.handleVideoListEntryTitleClick.bind(this)}
               videos={this.state.videos}
+
             />
           </div>
         </div>
