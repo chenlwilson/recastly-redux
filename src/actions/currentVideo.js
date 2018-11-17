@@ -1,7 +1,7 @@
 var changeVideo = (video) => {
   //TODO:  Return some action object to change the currently playing video.
   return {
-    type: 'CURRENT_VIDEO',
+    type: 'CHANGE_VIDEO',
     video
   };
 
