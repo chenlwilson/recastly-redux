@@ -3,22 +3,26 @@ import changeVideoList from './videoList.js';
 import changeVideo from './currentVideo.js';
 import YOUTUBE_API_KEY from '../config/youtube.js';
 
-
+// An asynchronous action to handle a video search!
 var handleVideoSearch = (q) => {
   var options = {
-    key: YOUTUBE_API_KEY,
+    key: 'AIzaSyDTMKLkenW8qDxadAThrgNgHfqZuNtE8YE',
     query: q
   };
-  //TODO:  Write an asynchronous action to handle a video search!
-  var action = {
-    type: 'SEARCH',
-    // searchYouTube(options, function() {
-    //   changeVideoList;
-    //   changeVideo;
-    // })
+  console.log('hi');
+  return function (dispatch) {
+    searchYouTube({
+      key: 'AIzaSyDTMKLkenW8qDxadAThrgNgHfqZuNtE8YE',
+      query: q
+    }, function (data) {
+      console.log('data', data);
+      dispatch(changeVideoList(data));
+      dispatch(changeVideo(data[0]));
+    });
   };
 
 };
+
 
 export default handleVideoSearch;
 // function addTodo(text) {

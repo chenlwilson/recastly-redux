@@ -22,8 +22,10 @@
     "react": "^15.6.1",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.6",
+    "react-test-renderer": "^15.5.4",
     "redux": "^3.6.0",
     "redux-thunk": "2.2.0",
+    "shallow": "^1.0.0",
     "thunk": "0.0.1"
   },
   "devDependencies": {
@@ -34,7 +36,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "6.24.1",
     "chai": "^3.5.0",
-    "enzyme": "2.8.2",
+    "enzyme": "^2.8.2",
     "exports-loader": "0.6.4",
     "mocha": "2.3.3",
     "react-addons-test-utils": "15.6.0",

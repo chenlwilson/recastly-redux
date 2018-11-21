@@ -47,7 +47,7 @@ describe('Action dispatchers', function() {
       expect(changeVideoList.firstCall.returnValue.videos).to.equal(dummyData);
     });
   });
-  describe('handleVideoSearch', function() {
+  xdescribe('handleVideoSearch', function() {
     before(function () {
       mockReducer.reset();
       changeVideo.reset();
