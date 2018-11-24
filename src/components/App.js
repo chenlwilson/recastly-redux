@@ -13,54 +13,58 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      videos: [],
-      currentVideo: null
-    };
+    // this.state = {
+    //   videos: [],
+    //   currentVideo: null
+    // };
   }
 
-  componentDidMount() {
-    this.getYouTubeVideos('react tutorials');
-  }
+  // componentDidMount() {
+  //   // this.getYouTubeVideos('react tutorials');
+  //   store.dispatch(handleVideoSearch('cats'));
+  // }
 
-  handleVideoListEntryTitleClick(video) {
-    this.setState({currentVideo: video});
-  }
+  // handleVideoListEntryTitleClick(video) {
+  //   this.setState({currentVideo: video});
+  // }
 
-  getYouTubeVideos(query) {
-    var options = {
-      key: this.props.API_KEY,
-      query: query
-    };
+  // getYouTubeVideos(query) {
+  //   var options = {
+  //     key: this.props.API_KEY,
+  //     query: query
+  //   };
 
-    this.props.searchYouTube(options, (videos) =>
-      this.setState({
-        videos: videos,
-        currentVideo: videos[0]
-      })
-    );
-  }
+  //   this.props.searchYouTube(options, (videos) =>
+  //     this.setState({
+  //       videos: videos,
+  //       currentVideo: videos[0]
+  //     })
+  //   );
+  // }
 
   //TODO: swap out the React components below for the container components
   //  you wrote in the 'containers' directory.
   render() {
+    console.log("Hello App");
     return (
       <div>
         {/* probably don't need getYouTubeVideos */}
-        <Nav handleSearchInputChange={this.getYouTubeVideos.bind(this)}
+        <Nav
+        // handleSearchInputChange={this.getYouTubeVideos.bind(this)}
         />
         <div className="row">
           <div className="col-md-7">
             {/* do not need to pass down currentVideo */}
-            <VideoPlayer video={this.state.currentVideo}
+            <VideoPlayerContainer 
+            // video={this.state.currentVideo}
             />
           </div>
           <div className="col-md-5">
-            <VideoList
+            <VideoListContainer
               //don't need to pass down videos
               //don't need handleVideoListEntryTitleClick
-              handleVideoListEntryTitleClick={this.handleVideoListEntryTitleClick.bind(this)}
-              videos={this.state.videos}
+              // handleVideoListEntryTitleClick={this.handleVideoListEntryTitleClick.bind(this)}
+              // videos={this.state.videos}
 
             />
           </div>
