@@ -18,7 +18,6 @@ export default class App extends React.Component {
     //   currentVideo: null
     // };
   }
-
   // componentDidMount() {
   //   // this.getYouTubeVideos('react tutorials');
   //   store.dispatch(handleVideoSearch('cats'));
